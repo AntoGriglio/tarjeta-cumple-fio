@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-pink-50 text-gray-800;
+  font-family: 'Segoe UI', sans-serif;
+}
+#tsparticles canvas {
+  pointer-events: none !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
