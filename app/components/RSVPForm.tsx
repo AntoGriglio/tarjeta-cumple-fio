@@ -16,8 +16,12 @@ export default function RSVPForm() {
     try {
    await fetch(GOOGLE_SHEET_ENDPOINT, {
   method: 'POST',
-  body: new URLSearchParams({ name, attending }), // 👈 importante
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded', // 👈 IMPORTANTE
+  },
+  body: new URLSearchParams({ name, attending }),
 })
+
 
 
       setSubmitted(true)
