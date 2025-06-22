@@ -91,8 +91,7 @@ export default function Home() {
           <p className="silver-glow text-2xl font-semibold text-gray-500 drop-shadow-[0_0_6px_rgba(200,200,200,0.5)] mb-2">📍 Allá Bodegón</p>
           <a href="https://www.instagram.com/alla.bodegon" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:opacity-80 mb-4">@alla.bodegon</a>
           <div className="rounded-xl overflow-hidden shadow border border-gray-300 mt-2 w-full">
-            <iframe className="w-full h-64" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1702.486263522603!2d-64.498432!3d-31.414883" loading="lazy" allowFullScreen></iframe>
-          </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2087.4715537353964!2d-64.49957892853769!3d-31.41509924952632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d666a7035ab01%3A0x9f44f8ee99946c89!2sAv.%20Uruguay%20338%2C%20X5152%20Villa%20Carlos%20Paz%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1750627199918!5m2!1ses!2sar" width="400" height="300"  loading="lazy"></iframe> </div>
           <p className="text-sm mt-6">
             Te podés alojar en <a href="https://www.instagram.com/hostaldelacosta_vcp" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">@hostaldelacosta_vcp</a>
           </p>
@@ -115,7 +114,7 @@ export default function Home() {
         <div className="w-full max-w-sm flex flex-col items-center border-t border-b border-gray-300 py-12">
           <h2 className="silver-glow text-2xl font-semibold mb-4 text-gray-500 drop-shadow-[0_0_6px_rgba(200,200,200,0.4)]">🎶 ¡Sumá tu canción!</h2>
           <p className="text-sm mb-6">Ayudanos a armar la playlist para bailar toda la noche 💃🕺</p>
-          <a href="https://open.spotify.com/playlist/4NNnXadf2nbV3n9chFq92G" target="_blank" rel="noopener noreferrer" className="text-sm px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">Agregar música a la playlist</a>
+          <a href="https://open.spotify.com/playlist/4J26WFxMUA2TXKBGonVxTw?si=10171ab7634d4698&pt=9766b3073d96fa478995ede4120c0355" target="_blank" rel="noopener noreferrer" className="text-sm px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition">Agregar música a la playlist</a>
         </div>
       )
     },

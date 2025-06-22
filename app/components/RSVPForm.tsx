@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-const GOOGLE_SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbydrQFPXiwUFpL9mzDxfnWzP8X4uaCqSZXPPOi2WD1jI-aPR2TcA4alXl3w5P9-2A2-DQ/exec'
+const GOOGLE_SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyAvyjOPRF8keH2D2tw2ngA-p5pZisk9QdeGO-wBpkB1e6duOPUeyzmCCAoAkXMRTvxlA/exec'
 
 export default function RSVPForm() {
   const [name, setName] = useState('')
@@ -14,13 +14,11 @@ export default function RSVPForm() {
     if (!name || !attending) return
 
     try {
-      await fetch(GOOGLE_SHEET_ENDPOINT, {
-        method: 'POST',
-        body: JSON.stringify({ name, attending }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
+   await fetch(GOOGLE_SHEET_ENDPOINT, {
+  method: 'POST',
+  body: new URLSearchParams({ name, attending }), // 👈 importante
+})
+
 
       setSubmitted(true)
     } catch (error) {
