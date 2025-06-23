@@ -69,7 +69,7 @@ export default function Home() {
             </div>
             <div className="flex-1 text-center">
               <p className="text-lg font-semibold">Hora:</p>
-              <p className="text-xl font-bold mt-1">20:00</p>
+              <p className="text-xl font-bold mt-1">20 hs</p>
             </div>
           </div>
         </>
@@ -175,8 +175,8 @@ export default function Home() {
       <section className="min-h-screen flex flex-col justify-center items-center text-white text-center bg-cover bg-center relative">
         <GlitterBackground />
         <div className="bg-black bg-opacity-10 w-full h-full flex flex-col justify-center items-center">
-          <h1 className="text-[10rem] font-extrabold tracking-tight drop-shadow-[0_0_25px_rgba(255,255,255,0.9)] font-serif silver-glow">15</h1>
-          <p className="text-[4rem] italic font-light mt-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)] font-serif silver-glow">Fiorella</p>
+          <h1 className="text-[10rem] font-extrabold tracking-tight drop-shadow-[0_0_25px_rgba(255,255,255,0.9)] font-serif">15</h1>
+          <p className="text-[4rem] italic font-light mt-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)] font-serif ">Fiorella</p>
           <p className="text-sm mt-6 animate-bounce drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Deslizá para ver más ↓</p>
         </div>
       </section>
