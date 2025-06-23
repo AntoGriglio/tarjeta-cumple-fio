@@ -68,8 +68,8 @@ export default function Home() {
               <p className="silver-glow text-4xl font-bold text-gray-500 drop-shadow-[0_0_6px_rgba(200,200,200,0.4)]">16</p>
             </div>
             <div className="flex-1 text-center">
-              <p className="text-lg font-semibold">Hora:</p>
-              <p className="text-xl font-bold mt-1">20 hs</p>
+              <p className="text-lg font-semibold">Hora</p>
+              <p className="text-xl font-bold mt-1">20:00</p>
             </div>
           </div>
         </>
