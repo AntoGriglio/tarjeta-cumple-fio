@@ -127,6 +127,32 @@ export default function Home() {
       )
     },
     {
+  id: 'fotos',
+  content: (
+    <div className="w-full max-w-sm flex flex-col items-center border-t border-b border-gray-300 py-12">
+      <h2 className="silver-glow text-2xl font-semibold mb-4 text-gray-500 drop-shadow-[0_0_6px_rgba(200,200,200,0.4)]">📸 Subí tus fotos</h2>
+      <p className="text-sm mb-6 text-center">¡Queremos revivir la noche con vos! Subí las fotos que sacaste y etiquetanos también en Instagram.</p>
+      <a
+        href="https://drive.google.com/drive/folders/1VU9w3tIRbSnFTN_Pp0ya5JP7_Nvr2nHV?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm px-4 py-2 border border-black rounded-full hover:bg-black hover:text-white transition mb-4"
+      >
+        Subir fotos a Drive
+      </a>
+      <a
+        href="https://www.instagram.com/fio152025"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm underline hover:opacity-80"
+      >
+        @fio152025
+      </a>
+    </div>
+  )
+},
+
+    {
       id: 'confirmacion',
       content: (
         <>
