@@ -8,6 +8,7 @@ export default function Home() {
   const eventDate = new Date('2025-08-15T20:00:00').getTime()
   const [timeLeft, setTimeLeft] = useState('')
   const glowRef = useRef<HTMLDivElement | null>(null)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -50,6 +51,12 @@ export default function Home() {
     animate()
   }, [])
 
+  const playAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.play().catch(err => console.warn('Autoplay bloqueado:', err))
+    }
+  }
+
   const sections = [
     {
       id: 'fecha',
@@ -91,7 +98,8 @@ export default function Home() {
           <p className="silver-glow text-2xl font-semibold text-gray-500 drop-shadow-[0_0_6px_rgba(200,200,200,0.5)] mb-2">📍 Allá Bodegón</p>
           <a href="https://www.instagram.com/alla.bodegon" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:opacity-80 mb-4">@alla.bodegon</a>
           <div className="rounded-xl overflow-hidden shadow border border-gray-300 mt-2 w-full">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2087.4715537353964!2d-64.49957892853769!3d-31.41509924952632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d666a7035ab01%3A0x9f44f8ee99946c89!2sAv.%20Uruguay%20338%2C%20X5152%20Villa%20Carlos%20Paz%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1750627199918!5m2!1ses!2sar" width="400" height="300"  loading="lazy"></iframe> </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2087.4715537353964!2d-64.49957892853769!3d-31.41509924952632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d666a7035ab01%3A0x9f44f8ee99946c89!2sAv.%20Uruguay%20338%2C%20X5152%20Villa%20Carlos%20Paz%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1750627199918!5m2!1ses!2sar" width="400" height="300" loading="lazy"></iframe>
+          </div>
           <p className="text-sm mt-6">
             Te podés alojar en <a href="https://www.instagram.com/hostaldelacosta_vcp" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">@hostaldelacosta_vcp</a>
           </p>
@@ -134,8 +142,9 @@ export default function Home() {
     }
   ]
 
-  return (
+   return (
     <>
+      <audio ref={audioRef} src="/ojos.mp3" preload="auto" />
       <style jsx global>{`
         .section-border-glitter {
           position: relative;
@@ -177,11 +186,11 @@ export default function Home() {
         <div className="bg-black bg-opacity-10 w-full h-full flex flex-col justify-center items-center">
           <h1 className="text-[10rem] font-extrabold tracking-tight drop-shadow-[0_0_25px_rgba(255,255,255,0.9)] font-serif">15</h1>
           <p className="text-[4rem] italic font-light mt-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)] font-serif ">Fiorella</p>
-          <p className="text-sm mt-6 animate-bounce drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">Deslizá para ver más ↓</p>
+          <p onClick={playAudio} className="text-sm mt-6 animate-bounce drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] cursor-pointer">Deslizá para ver más ↓</p>
         </div>
       </section>
 
-      {sections.map((section, idx) => (
+      {sections.map((section) => (
         <div key={section.id}>
           <div className="h-32 md:h-48 relative overflow-hidden">
             <GlitterBackground />
